@@ -4,6 +4,7 @@ import BalanceCard from "../widgets/BalanceCard.vue";
 import HeaderComponent from "../widgets/HeaderComponent.vue";
 import CertificatesCard from "../widgets/CertificatesCard.vue";
 import ActiveRecordsCard from "../widgets/ActiveRecordsCard.vue";
+import FooterComponent from "../widgets/FooterComponent.vue";
 </script>
 
 <template>
@@ -15,13 +16,13 @@ import ActiveRecordsCard from "../widgets/ActiveRecordsCard.vue";
       <CertificatesCard />
       <ActiveRecordsCard />
     </q-content>
+    <FooterComponent />
   </q-layout>
 </template>
 
 <style lang="scss" scoped>
 .page {
-  padding: 0 16px;
-  padding-top: 60px;
+  padding: 60px 16px;
 
   .content {
     display: grid;
