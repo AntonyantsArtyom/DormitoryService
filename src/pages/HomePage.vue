@@ -3,6 +3,7 @@ import ActionButton from "../shared/UI/ActionButton.vue";
 import BalanceCard from "../widgets/BalanceCard.vue";
 import HeaderComponent from "../widgets/HeaderComponent.vue";
 import CertificatesCard from "../widgets/CertificatesCard.vue";
+import ActiveRecordsCard from "../widgets/ActiveRecordsCard.vue";
 </script>
 
 <template>
@@ -12,6 +13,7 @@ import CertificatesCard from "../widgets/CertificatesCard.vue";
       <BalanceCard />
       <ActionButton />
       <CertificatesCard />
+      <ActiveRecordsCard />
     </q-content>
   </q-layout>
 </template>
