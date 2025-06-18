@@ -11,6 +11,7 @@
 <style lang="scss" scoped>
 .header {
   display: flex;
+  position: fixed;
   align-content: center;
   padding: 0 16px;
   height: 48px;
