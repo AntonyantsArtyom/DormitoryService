@@ -1,9 +1,17 @@
 <script setup lang="ts">
-import LoginPage from "./pages/LoginPage.vue";
+import HomePage from "./pages/HomePage.vue";
 </script>
 
 <template>
-  <LoginPage />
+  <HomePage />
 </template>
 
-<style scoped></style>
+<style>
+p {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+</style>
