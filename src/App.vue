@@ -1,10 +1,19 @@
-<script setup lang="ts">
-import HomePage from "./pages/HomePage.vue";
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <HomePage />
+  <router-view />
 </template>
+
+<script setup lang="ts"></script>
+
+<style>
+p {
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+</style>
 
 <style>
 p {
