@@ -1,8 +1,21 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import { useUserStore } from "../shared/states/UserStore";
 
 const mail = ref("");
 const pass = ref("");
+
+const userStore = useUserStore();
+
+const handleLogin = async () => {
+  try {
+    await userStore.login(mail.value, pass.value);
+    // можно добавить редирект или сообщение об успехе
+  } catch (err) {
+    // обработка ошибки (например, показать сообщение пользователю)
+    console.error("Ошибка входа", err);
+  }
+};
 </script>
 
 <template>
@@ -15,9 +28,9 @@ const pass = ref("");
       </div>
       <div class="inputarea">
         <q-input class="input" outlined v-model="mail" label="адрес электронной почты" />
-        <q-input class="input" outlined v-model="pass" label="пароль" />
+        <q-input class="input" type="password" outlined v-model="pass" label="пароль" />
       </div>
-      <q-btn class="button" unelevated color="primary" label="Вход" icon-right="arrow_forward" />
+      <q-btn class="button" unelevated color="primary" label="Вход" icon-right="arrow_forward" :loading="userStore.loading" @click="handleLogin" />
     </q-card-section>
   </q-card>
 </template>
