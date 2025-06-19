@@ -10,9 +10,7 @@ const userStore = useUserStore();
 const handleLogin = async () => {
   try {
     await userStore.login(mail.value, pass.value);
-    // можно добавить редирект или сообщение об успехе
   } catch (err) {
-    // обработка ошибки (например, показать сообщение пользователю)
     console.error("Ошибка входа", err);
   }
 };
