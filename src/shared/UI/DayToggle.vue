@@ -20,10 +20,15 @@ const options = Array.from({ length: 14 }, (_, i) => {
 </script>
 
 <template>
-  <q-btn-toggle v-model="selectedDay" :options="options" flat />
+  <div class="content">
+    <q-btn-toggle v-model="selectedDay" :options="options" flat />
+  </div>
 </template>
 
 <style scoped>
+.content {
+  overflow-x: scroll;
+}
 .q-btn__content {
   white-space: pre-line;
   text-align: center;
