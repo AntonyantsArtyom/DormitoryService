@@ -1,11 +1,15 @@
 <template>
-  <q-btn class="button" unelevated color="primary" label="Оплатить" v-bind="$attrs" />
+  <q-btn class="button" unelevated color="primary" :label="label" v-bind="$attrs" />
 </template>
 
 <script setup lang="ts">
 defineOptions({
   inheritAttrs: false,
 });
+
+defineProps<{
+  label: string;
+}>();
 </script>
 
 <style lang="scss" scoped>

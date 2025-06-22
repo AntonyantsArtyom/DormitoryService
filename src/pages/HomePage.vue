@@ -12,7 +12,7 @@ import FooterComponent from "../widgets/FooterComponent.vue";
     <HeaderComponent />
     <q-content class="content">
       <BalanceCard />
-      <ActionButton />
+      <ActionButton label="оплатить" />
       <CertificatesCard />
       <ActiveRecordsCard />
     </q-content>
