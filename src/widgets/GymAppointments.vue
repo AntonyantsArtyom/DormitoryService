@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import ActionButton from "../shared/UI/ActionButton.vue";
 import DayToggle from "../shared/UI/DayToggle.vue";
+import AppointmentsCard from "./AppointmentsCard.vue";
 import ResponsibleCard from "./ResponsibleCard.vue";
 </script>
 
@@ -8,8 +8,7 @@ import ResponsibleCard from "./ResponsibleCard.vue";
   <div class="widgetcontent">
     <DayToggle />
     <ResponsibleCard />
-    <ActionButton label="стать ответственным на ПН 30.01" />
-    <ActionButton label="изменить список ответственных" />
+    <AppointmentsCard />
   </div>
 </template>
 
