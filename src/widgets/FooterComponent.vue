@@ -1,11 +1,27 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+
+const goHome = () => router.push("/");
+const goAppointments = () => router.push("/appointment");
+const goShedule = () => router.push("/shedule");
+</script>
 
 <template>
   <q-footer elevated class="footer">
     <q-toolbar class="content q-justify-around">
-      <div class="navitem column items-center">
+      <div class="navitem column items-center" @click="goHome">
         <q-icon name="home" size="20px" />
         <span class="text-caption">Главная</span>
+      </div>
+      <div class="navitem column items-center" @click="goAppointments">
+        <q-icon name="event_note" size="20px" />
+        <span class="text-caption">Записи</span>
+      </div>
+      <div class="navitem column items-center" @click="goShedule">
+        <q-icon name="calendar_today" size="20px" />
+        <span class="text-caption">Расписание</span>
       </div>
       <div class="navitem column items-center">
         <q-icon name="logout" size="20px" />
@@ -35,6 +51,7 @@
     .navitem {
       display: grid;
       justify-items: center;
+      cursor: pointer;
     }
   }
 }
