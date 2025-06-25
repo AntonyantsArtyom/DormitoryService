@@ -1,3 +1,9 @@
+<script setup lang="ts">
+import { useUserStore } from "../shared/states/UserStore";
+
+const userStore = useUserStore();
+</script>
+
 <template>
   <q-card class="container">
     <q-card-section class="content">
@@ -5,12 +11,12 @@
       <q-separator />
       <div class="valuecontainer">
         <p class="columnname">Общежитие</p>
-        <p class="value">120₽</p>
+        <p class="value">{{ userStore.user?.balance || "???" }} ₽</p>
       </div>
       <q-separator />
       <div class="valuecontainer">
         <p class="columnname">Интернет</p>
-        <p class="value">120₽</p>
+        <p class="value">{{ "???" }} ₽</p>
       </div>
     </q-card-section>
   </q-card>
