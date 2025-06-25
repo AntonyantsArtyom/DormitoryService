@@ -1,9 +1,13 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useUserStore } from "../shared/states/UserStore";
+
+const userStore = useUserStore();
+</script>
 
 <template>
   <q-header elevated class="header">
     <q-toolbar>
-      <p class="name">Иванов Иван Иванович</p>
+      <p class="name">{{ userStore.user?.lastName }} {{ userStore.user?.firstName }} {{ userStore.user?.middleName }}</p>
     </q-toolbar>
   </q-header>
 </template>
