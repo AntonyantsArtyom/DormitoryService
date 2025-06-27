@@ -1,4 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useUserStore } from "./shared/states/UserStore";
+import { onMounted } from "vue";
+const userStore = useUserStore();
+
+onMounted(() => {
+  userStore.getWholeUser();
+});
+</script>
 
 <template>
   <router-view />
