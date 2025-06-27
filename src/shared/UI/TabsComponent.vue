@@ -24,8 +24,8 @@ onMounted(() => {
 <template>
   <div class="tabscontainer">
     <p class="title" v-if="props?.label">{{ props.label }}</p>
-    <q-tabs v-model="tab" class="text-primary" dense active-color="primary" indicator-color="primary">
-      <q-tab v-for="t in tabs" :key="t.name" :name="t.name" :label="t.label" />
+    <q-tabs v-model="tab">
+      <q-tab class="tabs" v-for="t in tabs" :key="t.name" :name="t.name" :label="t.label" />
     </q-tabs>
   </div>
 
@@ -41,6 +41,20 @@ onMounted(() => {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  ::v-deep(.q-tab) {
+    text-transform: unset;
+    padding: 0px;
+  }
+
+  ::v-deep(.q-tabs__content) {
+    display: flex;
+    gap: 10px;
+  }
+
+  ::v-deep(.q-tab__label) {
+    font-size: 16px;
+  }
 }
 
 .itemcontainer {
