@@ -20,7 +20,7 @@ onMounted(() => {
     <HeaderComponent />
     <q-content class="content">
       <BalanceCard />
-      <ActionButton label="оплатить" />
+      <!-- <ActionButton label="оплатить" /> -->
       <CertificatesCard />
       <ActiveRecordsCard />
     </q-content>
