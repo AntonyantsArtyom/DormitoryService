@@ -1,5 +1,18 @@
 <script setup lang="ts">
 import ActionIconButton from "../shared/UI/ActionIconButton.vue";
+import { useUserStore } from "../shared/states/UserStore";
+
+const userStore = useUserStore();
+
+const formatDate = (dateString: string) => {
+  const date = new Date(dateString);
+  const day = String(date.getDate()).padStart(2, "0");
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const year = date.getFullYear();
+  const hours = String(date.getHours()).padStart(2, "0");
+  const minutes = String(date.getMinutes()).padStart(2, "0");
+  return `${day}.${month}.${year}: ${hours}:${minutes}`;
+};
 </script>
 
 <template>
@@ -8,16 +21,16 @@ import ActionIconButton from "../shared/UI/ActionIconButton.vue";
       <p class="cardtitle">Активные записи</p>
       <q-separator />
       <div class="valuecontainer">
-        <div class="valueitem" v-for="n in 3" :key="n">
+        <div class="valueitem" v-for="event in userStore.user?.activeEvents" :key="event.id">
           <div>
-            <p class="title">Дежурство на кухне</p>
+            <p class="title">{{ event.type }}</p>
             <div class="dateinfo">
               <q-badge rounded color="green" />
-              <p class="date">сегодня</p>
+              <p class="date">{{ formatDate(event.startTime) }} - {{ formatDate(event.endTime) }}</p>
             </div>
           </div>
           <div class="actions">
-            <ActionIconButton />
+            <ActionIconButton v-if="event.closable" />
           </div>
         </div>
       </div>

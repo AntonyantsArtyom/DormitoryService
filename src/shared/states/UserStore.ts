@@ -14,14 +14,23 @@ export interface IUserState {
   loading: boolean;
 }
 
-type CertificateType = "CERTIFICATE" | "FLUOROGRAPHY";
+type TCertificate = "CERTIFICATE" | "FLUOROGRAPHY";
 
-interface MedicalCertificate {
+interface IMedicalCertificate {
   id: string;
   user: string;
-  type: CertificateType;
+  type: TCertificate;
   startDate: string;
   endDate: string;
+}
+
+interface IEvent {
+  startTime: string;
+  endTime: string;
+  id: string;
+  status: string;
+  type: string;
+  closable: boolean;
 }
 
 interface IUser {
@@ -32,9 +41,9 @@ interface IUser {
   roomNumber: string;
   role: string[];
   balance: number;
-  pediculosis: MedicalCertificate;
-  fluorography: MedicalCertificate;
-  activeEvents: any[];
+  pediculosis: IMedicalCertificate;
+  fluorography: IMedicalCertificate;
+  activeEvents: IEvent[];
 }
 
 export const useUserStore = defineStore("user", {
