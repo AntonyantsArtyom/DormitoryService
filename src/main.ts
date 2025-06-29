@@ -19,6 +19,11 @@ myApp.use(Router);
 
 myApp.use(Quasar, {
   plugins: { Notify },
+  config: {
+    brand: {
+      primary: "#48A64C",
+    },
+  },
 });
 
 myApp.mount("#app");
