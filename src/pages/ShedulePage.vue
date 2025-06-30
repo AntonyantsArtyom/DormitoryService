@@ -3,7 +3,7 @@ import HeaderComponent from "../widgets/HeaderComponent.vue";
 import FooterComponent from "../widgets/FooterComponent.vue";
 import TabsComponent from "../shared/UI/TabsComponent.vue";
 import ActionButton from "../shared/UI/ActionButton.vue";
-import GymAppointments from "../widgets/GymAppointments.vue";
+import KitchenShedule from "../widgets/KitchenShedule.vue";
 </script>
 
 <template>
@@ -13,7 +13,7 @@ import GymAppointments from "../widgets/GymAppointments.vue";
       <TabsComponent
         label="расписание"
         :tabs="[
-          { name: 'kitchen', label: 'Кухня', content: GymAppointments },
+          { name: 'kitchen', label: 'Кухня', content: KitchenShedule },
           { name: 'COOP', label: 'СООП', content: ActionButton },
         ]"
       />
