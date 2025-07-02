@@ -73,5 +73,15 @@ export const useUserStore = defineStore("user", {
         this.loading = false;
       }
     },
+    async deleteActiveEvent(eventId: string) {
+      this.loading = true;
+      try {
+        await api.patch(`/bookings/cancel/${eventId}`);
+        await this.getWholeUser();
+      } catch (error) {
+      } finally {
+        this.loading = false;
+      }
+    },
   },
 });

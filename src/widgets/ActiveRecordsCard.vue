@@ -30,7 +30,7 @@ const formatDate = (dateString: string) => {
             </div>
           </div>
           <div class="actions">
-            <ActionIconButton v-if="event.closable" />
+            <ActionIconButton v-if="event.closable" @click="() => userStore.deleteActiveEvent(event.id)" />
           </div>
         </div>
       </div>
