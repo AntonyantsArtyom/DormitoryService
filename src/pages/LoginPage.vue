@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import LoginForm from "../widgets/LoginForm.vue";
+import LoginForm from "../features/LoginForm.vue";
 import applogo from "../shared/icons/applogo.svg";
 </script>
 

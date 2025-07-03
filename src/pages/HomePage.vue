@@ -3,8 +3,8 @@ import ActionButton from "../shared/UI/ActionButton.vue";
 import BalanceCard from "../entities/User/UI/BalanceCard.vue";
 import HeaderComponent from "../widgets/HeaderComponent.vue";
 import CertificatesCard from "../entities/User/UI/CertificatesCard.vue";
-import ActiveRecordsCard from "../entities/UserEvents/UI/ActiveRecordsCard.vue";
 import FooterComponent from "../widgets/FooterComponent.vue";
+import ActiveRecordsCard from "../entities/Appointments/UI/ActiveRecordsCard.vue";
 </script>
 
 <template>
