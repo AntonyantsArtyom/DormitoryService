@@ -4,7 +4,7 @@ import BalanceCard from "../entities/User/UI/BalanceCard.vue";
 import HeaderComponent from "../widgets/HeaderComponent.vue";
 import CertificatesCard from "../entities/User/UI/CertificatesCard.vue";
 import FooterComponent from "../widgets/FooterComponent.vue";
-import ActiveRecordsCard from "../entities/Appointments/UI/ActiveRecordsCard.vue";
+import ActiveRecordsCard from "../entities/User/UI/ActiveRecordsCard.vue";
 </script>
 
 <template>

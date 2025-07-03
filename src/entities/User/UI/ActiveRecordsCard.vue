@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import ActionIconButton from "../../../shared/UI/ActionIconButton.vue";
-import { useUserStore } from "../../User/state/UserStore";
+import { useUserStore } from "../state/UserStore";
 
 const userStore = useUserStore();
 
