@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import DayToggle from "../shared/UI/DayToggle.vue";
 import AppointmentsCard from "../entities/Appointments/UI/AppointmentsCard.vue";
-import ResponsibleCard from "./ResponsibleCard.vue";
+import ResponsibleCard from "../shared/UI/ResponsibleCard.vue";
 </script>
 
 <template>
