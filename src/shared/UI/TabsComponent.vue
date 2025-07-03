@@ -31,7 +31,7 @@ onMounted(() => {
 
   <q-tab-panels class="tabs" v-model="tab" animated>
     <q-tab-panel class="itemcontainer" v-for="t in tabs" :key="t.name" :name="t.name">
-      <component :is="t.content" />
+      <component :is="t.content" :active-tab="tab" />
     </q-tab-panel>
   </q-tab-panels>
 </template>
