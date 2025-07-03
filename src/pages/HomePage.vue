@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import ActionButton from "../shared/UI/ActionButton.vue";
-import BalanceCard from "../widgets/BalanceCard.vue";
+import BalanceCard from "../entities/User/UI/BalanceCard.vue";
 import HeaderComponent from "../widgets/HeaderComponent.vue";
-import CertificatesCard from "../widgets/CertificatesCard.vue";
-import ActiveRecordsCard from "../widgets/ActiveRecordsCard.vue";
+import CertificatesCard from "../entities/User/UI/CertificatesCard.vue";
+import ActiveRecordsCard from "../entities/UserEvents/UI/ActiveRecordsCard.vue";
 import FooterComponent from "../widgets/FooterComponent.vue";
 </script>
 

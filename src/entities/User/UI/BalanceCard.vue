@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useUserStore } from "../shared/states/UserStore";
+import { useUserStore } from "../state/UserStore";
 
 const userStore = useUserStore();
 </script>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { useUserStore } from "../shared/states/UserStore";
+import { useUserStore } from "../entities/User/state/UserStore";
 
 const mail = ref("");
 const pass = ref("");

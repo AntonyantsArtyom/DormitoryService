@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AppointmentsCard from "./AppointmentsCard.vue";
+import AppointmentsCard from "../entities/Appointments/UI/AppointmentsCard.vue";
 import ResponsibleCard from "./ResponsibleCard.vue";
 </script>
 

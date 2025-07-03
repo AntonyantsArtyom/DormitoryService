@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ActionButton from "../shared/UI/ActionButton.vue";
+import ActionButton from "../../../shared/UI/ActionButton.vue";
 </script>
 
 <template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useUserStore } from "./shared/states/UserStore";
+import { useUserStore } from "./entities/User/state/UserStore";
 import { onMounted } from "vue";
 const userStore = useUserStore();
 
