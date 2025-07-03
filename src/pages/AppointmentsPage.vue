@@ -2,7 +2,7 @@
 import HeaderComponent from "../widgets/HeaderComponent.vue";
 import FooterComponent from "../widgets/FooterComponent.vue";
 import TabsComponent from "../shared/UI/TabsComponent.vue";
-import GymAppointments from "../widgets/GymAppointments.vue";
+import AppointmentsContent from "../widgets/AppointmentsContent.vue";
 </script>
 
 <template>
@@ -12,9 +12,9 @@ import GymAppointments from "../widgets/GymAppointments.vue";
       <TabsComponent
         label="записи"
         :tabs="[
-          { name: 'gym', label: 'Спорт. зал', content: GymAppointments },
-          { name: 'dance', label: 'Танц. зал', content: GymAppointments },
-          { name: 'internet', label: 'Интернет', content: GymAppointments },
+          { name: 'GYM', label: 'Спорт. зал', content: AppointmentsContent },
+          { name: 'HALL', label: 'Танц. зал', content: AppointmentsContent },
+          { name: 'INTERNET', label: 'Интернет', content: AppointmentsContent },
         ]"
       />
     </q-content>
