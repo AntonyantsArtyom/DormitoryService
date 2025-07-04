@@ -24,12 +24,16 @@ const appointmentsStore = useAppoinmentsStore();
 const props = defineProps<{ activeTab: string }>();
 const activeTab = toRef(props, "activeTab");
 
-watchEffect(() => {
-  appointmentsStore.setFilters({
-    page: activeTab.value,
-    date: selectedDate.value,
-  });
-});
+watch(
+  [activeTab, selectedDate],
+  () => {
+    appointmentsStore.setFilters({
+      page: activeTab.value,
+      date: selectedDate.value,
+    });
+  },
+  { immediate: true }
+);
 </script>
 
 <template>
