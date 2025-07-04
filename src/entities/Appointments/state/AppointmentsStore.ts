@@ -10,15 +10,26 @@ interface IAppoinment {
   closable: boolean;
 }
 
+interface IFilter {
+  page: string;
+  date: string;
+}
+
 export interface IAppoinmentsState {
+  filter: IFilter | null;
   appointments: IAppoinment[];
   loading: boolean;
 }
 
 export const useAppoinmentsStore = defineStore("appoinments", {
   state: (): IAppoinmentsState => ({
+    filter: null,
     appointments: [],
     loading: false,
   }),
-  actions: {},
+  actions: {
+    setFilters(filter: IFilter) {
+      this.filter = filter;
+    },
+  },
 });
