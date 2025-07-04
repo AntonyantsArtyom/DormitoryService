@@ -17,5 +17,6 @@ defineProps<{
   width: 100%;
   height: 40px;
   border-radius: 15px;
+  text-transform: unset;
 }
 </style>
