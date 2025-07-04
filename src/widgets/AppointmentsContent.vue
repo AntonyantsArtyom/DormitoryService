@@ -31,6 +31,7 @@ watch(
       page: activeTab.value,
       date: selectedDate.value,
     });
+    appointmentsStore.getAppointments();
   },
   { immediate: true }
 );

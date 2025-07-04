@@ -31,5 +31,9 @@ export const useAppoinmentsStore = defineStore("appoinments", {
     setFilters(filter: IFilter) {
       this.filter = filter;
     },
+    async getAppointments() {
+      const res = await api.get(`schedules/available/timeslot/${this.filter?.date}/${this.filter?.page}`, {});
+      alert(res);
+    },
   },
 });

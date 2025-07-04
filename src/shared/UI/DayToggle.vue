@@ -3,7 +3,6 @@ import { ref } from "vue";
 
 const selectedDay = ref(0);
 defineExpose({ selectedDay });
-
 const daysOfWeek = ["ВС", "ПН", "ВТ", "СР", "ЧТ", "ПТ", "СБ"];
 
 const options = Array.from({ length: 14 }, (_, i) => {
