@@ -9,15 +9,15 @@ const appoinmentsStore = useAppoinmentsStore();
 <template>
   <q-card class="container">
     <q-card-section class="content">
-      {{ JSON.stringify(appoinmentsStore.appointments, null, 3) }}
       <p class="cardtitle">Записи на понедельник 30.05</p>
       <q-separator />
       <div class="valuecontainer">
-        <div class="valueitem" v-for="n in 12" :key="n">
-          <span class="date">10:30 - 15:20</span>
-          <span class="count">3/5</span>
+        <div class="valueitem" v-for="appointment in appoinmentsStore.appointments" :key="appointment.id">
+          <span class="date">{{ appointment.startTime }} - {{ appointment.endTime }}</span>
+          <span class="count">{{ appointment.bookingCount }}/{{ appointment.limit }}</span>
           <div class="buttoncontainer">
-            <ActionButton label="записаться" />
+            <ActionButton v-if="!appointment.isBookedByMe && appointment.bookingCount !== appointment.limit" label="записаться" />
+            <ActionButton v-if="appointment.isBookedByMe" label="отменить запись" />
           </div>
         </div>
       </div>
