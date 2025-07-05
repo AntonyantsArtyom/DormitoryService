@@ -2,12 +2,12 @@ import { defineStore } from "pinia";
 import { api } from "../../../api";
 
 interface IAppoinment {
+  id: string;
   startTime: string;
   endTime: string;
-  id: string;
-  status: string;
-  type: string;
-  closable: boolean;
+  bookingCount: number;
+  limit: number;
+  isBookedByMe: boolean;
 }
 
 interface IFilter {
@@ -32,8 +32,8 @@ export const useAppoinmentsStore = defineStore("appoinments", {
       this.filter = filter;
     },
     async getAppointments() {
-      const res = await api.get(`schedules/available/timeslot/${this.filter?.date}/${this.filter?.page}`, {});
-      alert(res);
+      const res = await api.get<IAppoinment[]>(`schedules/available/timeslot/${this.filter?.date}/${this.filter?.page}`, {});
+      this.appointments = res.data;
     },
   },
 });

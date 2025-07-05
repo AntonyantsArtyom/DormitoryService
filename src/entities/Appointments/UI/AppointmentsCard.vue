@@ -1,13 +1,15 @@
 <script setup lang="ts">
 import ActionButton from "../../../shared/UI/ActionButton.vue";
 import { useUserStore } from "../../User/state/UserStore";
+import { useAppoinmentsStore } from "../state/AppointmentsStore";
 
-const userStore = useUserStore();
+const appoinmentsStore = useAppoinmentsStore();
 </script>
 
 <template>
   <q-card class="container">
     <q-card-section class="content">
+      {{ JSON.stringify(appoinmentsStore.appointments, null, 3) }}
       <p class="cardtitle">Записи на понедельник 30.05</p>
       <q-separator />
       <div class="valuecontainer">
