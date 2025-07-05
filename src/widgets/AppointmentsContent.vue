@@ -41,6 +41,7 @@ watch(
 const userStore = useUserStore();
 
 const isGymResponsible = computed(() => userStore.user?.role.includes("Ответственный за зал"));
+const isGymMainResponsible = computed(() => userStore.user?.role.includes("Главный за спортзал"));
 </script>
 
 <template>
@@ -52,6 +53,8 @@ const isGymResponsible = computed(() => userStore.user?.role.includes("Отве�
     <ResponsibleCard />
     <div id="GYM" v-if="activeTab === 'GYM'">
       <ActionButton v-if="isGymResponsible" label="стать ответственным" />
+      <ActionButton v-if="isGymMainResponsible" label="назначить ответственного" />
+      <ActionButton v-if="isGymMainResponsible" label="изменить список ответственных" />
     </div>
     <AppointmentsCard />
   </div>
