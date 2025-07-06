@@ -35,5 +35,15 @@ export const useAppoinmentsStore = defineStore("appoinments", {
       const res = await api.get<IAppoinment[]>(`schedules/available/timeslot/${this.filter?.date}/${this.filter?.page}`, {});
       this.appointments = res.data;
     },
+    async deleteBooking(id: string) {
+      await api.patch(`bookings/cancel/by-timeslot/${id}`);
+      this.getAppointments();
+    },
+    async addBooking(id: string) {
+      await api.post(`bookings`, {
+        slotId: id,
+      });
+      this.getAppointments();
+    },
   },
 });
