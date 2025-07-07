@@ -46,9 +46,6 @@ const isGymMainResponsible = computed(() => userStore.user?.role.includes("Гл�
 
 <template>
   <div class="widgetcontent">
-    {{ activeTab }}
-    {{ JSON.stringify(appointmentsStore.filter) }}
-
     <DayToggle ref="selectorRef" />
     <ResponsibleCard />
     <div id="GYM" v-if="activeTab === 'GYM'">
