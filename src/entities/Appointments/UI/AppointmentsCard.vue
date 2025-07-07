@@ -17,7 +17,7 @@ const appoinmentsStore = useAppoinmentsStore();
           <span class="count">{{ appointment.bookingCount }}/{{ appointment.limit }}</span>
           <div class="buttoncontainer">
             <ActionButton v-if="!appointment.isBookedByMe && appointment.bookingCount !== appointment.limit" label="записаться" @click="() => appoinmentsStore.addBooking(appointment.id)" />
-            <ActionButton v-if="appointment.isBookedByMe" label="отменить запись" @click="() => appoinmentsStore.deleteBooking(appointment.id)" />
+            <ActionButton v-if="appointment.isBookedByMe" negative label="отменить запись" @click="() => appoinmentsStore.deleteBooking(appointment.id)" />
           </div>
         </div>
       </div>

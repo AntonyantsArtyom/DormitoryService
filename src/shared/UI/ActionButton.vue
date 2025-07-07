@@ -1,5 +1,5 @@
 <template>
-  <q-btn class="button" unelevated color="primary" :label="label" v-bind="$attrs" />
+  <q-btn class="button" unelevated :color="negative ? 'negative' : 'primary'" :label="label" v-bind="$attrs" />
 </template>
 
 <script setup lang="ts">
@@ -9,6 +9,7 @@ defineOptions({
 
 defineProps<{
   label: string;
+  negative?: boolean;
 }>();
 </script>
 
