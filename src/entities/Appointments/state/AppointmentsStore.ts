@@ -33,6 +33,7 @@ export const useAppoinmentsStore = defineStore("appoinments", {
     },
     async getAppointments() {
       const res = await api.get<IAppoinment[]>(`schedules/available/timeslot/${this.filter?.date}/${this.filter?.page}`, {});
+      res.data.sort((a, b) => a.startTime.localeCompare(b.startTime));
       this.appointments = res.data;
     },
     async deleteBooking(id: string) {
