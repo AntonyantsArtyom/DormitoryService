@@ -1,7 +1,7 @@
 import { defineStore } from "pinia";
 import { api } from "../../../api";
 
-interface IAppoinment {
+export interface IAppoinment {
   id: string;
   startTime: string;
   endTime: string;

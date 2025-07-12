@@ -1,5 +1,5 @@
 <template>
-  <q-btn class="button" unelevated :color="negative ? 'negative' : 'primary'" :label="label" v-bind="$attrs" />
+  <q-btn :loading="loading" class="button" unelevated :color="negative ? 'negative' : 'primary'" :label="label" v-bind="$attrs" />
 </template>
 
 <script setup lang="ts">
@@ -10,6 +10,7 @@ defineOptions({
 defineProps<{
   label: string;
   negative?: boolean;
+  loading?: boolean;
 }>();
 </script>
 
