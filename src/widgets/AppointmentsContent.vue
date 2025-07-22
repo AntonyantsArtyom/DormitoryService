@@ -2,7 +2,7 @@
 import DayToggle from "../shared/UI/DayToggle.vue";
 import AppointmentsCard from "../entities/Appointments/UI/AppointmentsCard.vue";
 import ResponsibleCard from "../shared/UI/ResponsibleCard.vue";
-import { computed, onMounted, ref, toRef, watch, watchEffect } from "vue";
+import { computed, ref, toRef, watch } from "vue";
 import { useAppoinmentsStore } from "../entities/Appointments/state/AppointmentsStore";
 import ActionButton from "../shared/UI/ActionButton.vue";
 import { useUserStore } from "../entities/User/state/UserStore";
