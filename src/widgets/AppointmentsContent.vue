@@ -55,7 +55,7 @@ const isGymMainResponsible = computed(() => userStore.user?.role.includes("Гл�
       <ActionButton v-if="isGymMainResponsible" label="назначить ответственного" />
       <ActionButton v-if="isGymMainResponsible" label="изменить список ответственных" />
     </div>
-    <AppointmentsCard />
+    <AppointmentsCard :date="selectedDate" />
   </div>
 </template>
 
