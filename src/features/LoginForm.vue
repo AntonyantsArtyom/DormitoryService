@@ -1,15 +1,18 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useUserStore } from "../entities/User/state/UserStore";
+import { useRouter } from "vue-router";
 
 const mail = ref("");
 const pass = ref("");
 
 const userStore = useUserStore();
+const router = useRouter();
 
 const handleLogin = async () => {
   try {
     await userStore.login(mail.value, pass.value);
+    router.push("/");
   } catch (err) {
     console.error("Ошибка входа", err);
   }

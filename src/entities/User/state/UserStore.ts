@@ -64,6 +64,9 @@ export const useUserStore = defineStore("user", {
         this.loading = false;
       }
     },
+    async logout() {
+      localStorage.removeItem("accessToken");
+    },
     async getWholeUser() {
       this.loading = true;
       try {

@@ -1,11 +1,18 @@
 <script setup lang="ts">
 import { useRouter } from "vue-router";
+import { useUserStore } from "../entities/User/state/UserStore";
 
 const router = useRouter();
+
+const userStore = useUserStore();
 
 const goHome = () => router.push("/");
 const goAppointments = () => router.push("/appointment");
 const goShedule = () => router.push("/shedule");
+const goLogin = () => {
+  userStore.logout();
+  router.push("login");
+};
 </script>
 
 <template>
@@ -23,7 +30,7 @@ const goShedule = () => router.push("/shedule");
         <q-icon name="calendar_today" size="20px" />
         <span class="text-caption">Расписание</span>
       </div>
-      <div class="navitem column items-center">
+      <div class="navitem column items-center" @click="goLogin">
         <q-icon name="logout" size="20px" />
         <span class="text-caption">Выйти</span>
       </div>
